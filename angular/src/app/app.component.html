@@ -1,0 +1,76 @@
+<style>
+
+</style>
+
+<form name="calc" class="m-5 flex xl:h-screen justify-center items-center space-x-4">
+  <main class="mx-auto w-[30em] rounded-md shadow-xl z-[100]">
+    <div class="grid grid-cols-5 gap-3">
+      <div class="pt-6 pb-6 text-white text-3xl col-span-3">
+        {{title}}
+      </div>
+      <div class="flex text-right items-center">
+        <span class="text-white text-sm font-light w-[100%] mt-[21%]">THEME</span>
+      </div>
+      <div class="flex items-center">
+          <div class="w-[79%]">
+            <ul class="grid grid-cols-3 text-white text-center text-xs">
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+            </ul>
+            <div class="rounded-full bg-[#252d44] pl-1">
+              <button class="rounded-full bg-[#eb725d] w-4 h-4 mt-2"></button>
+            </div>
+          </div>
+      </div>
+    </div>
+
+ 
+
+    <input [value]="inputVals" id="inputBox" type="text" name="output" placeholder="0" disabled="disabled" class="disabledInput bg-[#181f32] p-6 text-5xl text-right font-bold text-white rounded-md w-[100%]" />
+
+
+    <div class="bg-[#181f32] p-6 mt-5 text-white rounded-md">
+
+      <div class="grid grid-cols-4 gap-3">
+        <button (click)="getInput($event)" class="bg-[#eae3db] p-4 rounded-md font-bold text-[#3e4454] text-2xl hover:bg-white">7</button>
+        <button (click)="getInput($event)" class="bg-[#eae3db] p-4 rounded-md font-bold text-[#3e4454] text-2xl hover:bg-white">8</button>
+        <button (click)="getInput($event)" class="bg-[#eae3db] p-4 rounded-md font-bold text-[#3e4454] text-2xl hover:bg-white">9</button>
+        <button (click)="getInput($event)" class="bg-[#64719d] p-4 rounded-md font-bold text-white text-2xl hover:bg-[#a2b3e1]">DEL</button>
+      </div>
+
+      <div class="grid grid-cols-4 gap-3 mt-3">
+        <button (click)="getInput($event)" class="bg-[#eae3db] p-4 rounded-md font-bold text-[#3e4454] text-2xl hover:bg-white">4</button>
+        <button (click)="getInput($event)" class="bg-[#eae3db] p-4 rounded-md font-bold text-[#3e4454] text-2xl hover:bg-white">5</button>
+        <button (click)="getInput($event)" class="bg-[#eae3db] p-4 rounded-md font-bold text-[#3e4454] text-2xl hover:bg-white">6</button>
+        <button (click)="getInput($event)" class="bg-[#eae3db] p-4 rounded-md font-bold text-[#3e4454] text-2xl hover:bg-white">+</button>
+      </div>
+
+
+      <div class="grid grid-cols-4 gap-3 mt-3">
+        <button (click)="getInput($event)" class="bg-[#eae3db] p-4 rounded-md font-bold text-[#3e4454] text-2xl hover:bg-white">1</button>
+        <button (click)="getInput($event)" class="bg-[#eae3db] p-4 rounded-md font-bold text-[#3e4454] text-2xl hover:bg-white">2</button>
+        <button (click)="getInput($event)" class="bg-[#eae3db] p-4 rounded-md font-bold text-[#3e4454] text-2xl hover:bg-white">3</button>
+        <button (click)="getInput($event)" class="bg-[#eae3db] p-4 rounded-md font-bold text-[#3e4454] text-2xl hover:bg-white">-</button>
+      </div>
+
+
+      <div class="grid grid-cols-4 gap-3 mt-3">
+        <button (click)="getInput($event)" class="bg-[#eae3db] p-4 rounded-md font-bold text-[#3e4454] text-2xl hover:bg-white">.</button>
+        <button (click)="getInput($event)" class="bg-[#eae3db] p-4 rounded-md font-bold text-[#3e4454] text-2xl hover:bg-white">0</button>
+        <button (click)="getInput($event)" class="bg-[#eae3db] p-4 rounded-md font-bold text-[#3e4454] text-2xl hover:bg-white">/</button>
+        <button (click)="getInput($event)" class="bg-[#eae3db] p-4 rounded-md font-bold text-[#3e4454] text-2xl hover:bg-white">X</button>
+      </div>
+
+      <div class="grid grid-cols-2 gap-3 mt-3">
+        <button (click)="getInput($event)" class="bg-[#64719d] p-4 rounded-md font-bold text-white text-2xl hover:bg-[#a2b3e1]">RESET</button>
+        <button (click)="getInput($event)" class="bg-[#d13f30] p-4 rounded-md font-bold text-white text-2xl hover:bg-[#f96c5b]">=</button>
+      </div>
+
+
+    </div>
+
+  </main>
+</form>
+
+
